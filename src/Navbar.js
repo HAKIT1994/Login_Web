@@ -20,6 +20,7 @@ function Navbar() {
             <Route path='/register' element={<Register/>}/>
         </Routes>
     </div>
+    {/* <span class="dot"></span> */}
     </>
   )
 }

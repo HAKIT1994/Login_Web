@@ -4,7 +4,6 @@
     left: 0;
     height: 50vh;
     width: 100%;
-    font-family: 'Trebuchet MS','Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
 }
 
 .login__container{
@@ -17,6 +16,7 @@
     align-items:center;
     justify-content:center;
     user-select: none;
+    margin: 40px;
 }
 
 .login__logo img{
@@ -46,6 +46,7 @@ img:hover  {
     margin-right: auto;
     padding: 20px;
     border-radius: 5px;
+    margin-top: 30px;
 }
 
 td[colspan="2"] {
