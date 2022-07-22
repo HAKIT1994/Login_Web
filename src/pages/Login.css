@@ -1,0 +1,62 @@
+.login{
+    display: table;
+    position: absolute;
+    left: 0;
+    height: 50vh;
+    width: 100%;
+    font-family: 'Trebuchet MS','Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+}
+
+.login__container{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.login__logo {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    user-select: none;
+}
+
+.login__logo img{
+    height:100px;
+}
+
+img:hover  {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.login__container > h2{
+    text-align: center 
+}
+
+.login__form{
+    background-color: antiquewhite;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+td[colspan="2"] {
+    text-align: center;
+}
+
+tr, td {
+    padding: 5px;
+}
+
+.login__btn{
+    border-radius:5px;
+    border-color:blueviolet;
+}

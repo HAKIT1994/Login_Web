@@ -1,0 +1,23 @@
+.Navbar {
+    width: 100%;
+    height: fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.Navbar__container{
+    display: flex;
+    justify-content: center;
+}
+
+ul li {
+  list-style-type: none;
+  text-decoration: none;
+  display: inline-block;
+  margin: 20px;
+}
+
+.Navbar__item {  
+    font-size: 28px;
+}
