@@ -3,6 +3,7 @@ import Login from './pages/Login';
 import {Routes, Route} from 'react-router-dom'
 import Navbar from './Navbar'
 
+
 function App() {
   return (
     <>

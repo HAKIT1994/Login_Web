@@ -1,14 +1,16 @@
 .login{
-    display: table;
     position: absolute;
     left: 0;
     height: 50vh;
     width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 100px;
+    user-select: none;
 }
 
 .login__container{
-    display: table-cell;
-    vertical-align: middle;
+    
 }
 
 .login__logo {
@@ -59,5 +61,10 @@ tr, td {
 
 .login__btn{
     border-radius:5px;
-    border-color:blueviolet;
+}
+
+.error {
+    text-align: center;
+    margin-top: 10px;
+    color: red;
 }

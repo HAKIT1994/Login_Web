@@ -1,7 +1,7 @@
 .Navbar {
     width: 100%;
     height: fit-content;
-    background-color: rgb(0, 0, 0);;
+    background-color:#333;
     padding: 10px;
     position:relative;
 }
@@ -29,13 +29,13 @@
 
 .Navbar__item:hover {
     text-transform: uppercase;
-}
+  }
 
 .dot {
     position:sticky;
     height: 25px;
     width: 25px;
-    background-color: rgb(255, 255, 255);
+    background-color: #111;
     border-radius: 50%;
     display: flex;
     margin-top: -8px;

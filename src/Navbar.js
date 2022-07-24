@@ -10,16 +10,16 @@ function Navbar() {
     <div className='Navbar'>
         <div className='Navbar__container'>
             <ul>
-                <li> <Link to="/login" className='Navbar__item'>Login</Link></li>
-                <li> <Link to="/register" className='Navbar__item'>Register</Link></li>
+                <li> <Link to="/login" class='Navbar__item'>Login</Link></li>
+                <li> <Link to="/register" class='Navbar__item'>Register</Link></li>
             </ul>
         </div>
+    </div>
         <Routes>
             <Route exact path='/' element={<Login/>}/>
             <Route exact path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
         </Routes>
-    </div>
     {/* <span class="dot"></span> */}
     </>
   )
