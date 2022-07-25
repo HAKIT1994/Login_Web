@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import {initializeApp } from "firebase/app";
 import {getAuth,signInWithEmailAndPassword,signOut} from "firebase/auth";
 import {getFirestore} from "firebase/firestore";
 
@@ -16,22 +16,26 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-const logInWithEmailAndPassword = async (email, password) => {
-  try {
-    await signInWithEmailAndPassword(auth, email, password);
-  } catch (err) {
-    console.error(err);
-    alert(err.message);
-  }
-};
 
-const logout = () => {
-  signOut(auth);
-};
+
+async function logInWithEmailAndPassword(email, password) {
+  try {
+    return await signInWithEmailAndPassword(auth, email, password);
+  } catch (error) {
+    var errorCode = error.code;
+    // var errorMessage = error.message;
+    alert(errorCode)
+  }
+}
+
+
+function logout() {
+  return signOut(auth);
+}
 
 export {
   auth,
   db,
-  logInWithEmailAndPassword ,
+  logInWithEmailAndPassword,
   logout,
 };

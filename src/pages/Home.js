@@ -1,16 +1,19 @@
-import React from 'react'
+import React,  { useEffect, useState } from 'react'
 import './Home.css'
-import { auth, db, logout } from "../firebase";
+import { auth, db} from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
+import { query, collection, getDocs, where } from "firebase/firestore";
 
-function Home(props) {
+function Home() {
+  const [user, loading, error] = useAuthState(auth);
+  const [name, setName] = useState("");
+
   return (
     <>
     <div className='home__msg'>
-        Welcome {props.uid}
+        Welcome {user.email}
     </div>
-    <button className="dashboard__btn" onClick={logout}>
-          Logout
-         </button>
     </>
   )
 }
