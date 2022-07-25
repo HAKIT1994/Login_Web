@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css'
+import { auth, db, logout } from "../firebase";
 
 function Home(props) {
   return (
@@ -7,6 +8,9 @@ function Home(props) {
     <div className='home__msg'>
         Welcome {props.uid}
     </div>
+    <button className="dashboard__btn" onClick={logout}>
+          Logout
+         </button>
     </>
   )
 }

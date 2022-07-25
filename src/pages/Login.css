@@ -61,6 +61,10 @@ tr, td {
 
 .login__btn{
     border-radius:5px;
+    padding: 2px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .error {
