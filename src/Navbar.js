@@ -27,6 +27,7 @@ function Navbar() {
             {user? (           
             <ul>
                 <li> <Link to="/home" class='Navbar__item'>Home</Link></li>
+                <li> <Link to="/chat" class='Navbar__item'>Chat</Link></li>
                 <li> <Link to="#" class='Navbar__item' onClick={handlelogout}>Logoff</Link></li>
             </ul>
             ):(

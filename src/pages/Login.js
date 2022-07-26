@@ -1,20 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import './Login.css'
 import { useNavigate } from "react-router-dom";
-import { auth, logInWithEmailAndPassword  } from "../firebase";
+import { auth, logIn } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-
-    // User Login info
-    const database = [
-        {
-        username: "user1",
-        password: "pass1"
-        },
-        {
-        username: "user2",
-        password: "pass2"
-        }
-    ];
 
     function Login() {
 
@@ -45,7 +33,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
                             {/* login form */}
                             <table class="login__form">
                                 <tr>
-                                    <td>Name: </td>
+                                    <td>Email: </td>
                                     <td><input type='text' name='uid' required onChange={(e) => setEmail(e.target.value)}/></td>
                                 </tr>
                                 <tr>
@@ -54,7 +42,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
                                 </tr>
                                 <tr>
                                     <td colSpan='2'>
-                                        <input className="login__btn" type="button" value='Login'  onClick={()=>logInWithEmailAndPassword(email,password)} />
+                                        <input className="login__btn" type="button" value='Login'  onClick={()=>logIn(email,password)} />
                                     </td>
                                 </tr>
                             </table>

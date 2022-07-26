@@ -1,3 +1,74 @@
-.register {
+.signup{
+    position: absolute;
+    left: 0;
+    height: 50vh;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 100px;
+    user-select: none;
+}
+
+.signup__container{
+    
+}
+
+.signup__logo {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    user-select: none;
+    margin: 40px;
+}
+
+.signup__logo img{
+    height:100px;
+}
+
+img:hover  {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.signup__container > h2{
+    text-align: center 
+}
+
+.signup__form{
+    background-color: antiquewhite;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+td[colspan="2"] {
     text-align: center;
+}
+
+tr, td {
+    padding: 5px;
+}
+
+.signup__btn{
+    border-radius:5px;
+    padding: 2px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.error {
+    text-align: center;
+    margin-top: 10px;
+    color: red;
 }

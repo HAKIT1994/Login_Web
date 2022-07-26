@@ -1,6 +1,6 @@
 import {initializeApp } from "firebase/app";
-import {getAuth,signInWithEmailAndPassword,signOut} from "firebase/auth";
-import {getFirestore} from "firebase/firestore";
+import {getAuth,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut} from "firebase/auth";
+import {getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -18,7 +18,7 @@ const db = getFirestore(app);
 
 
 
-async function logInWithEmailAndPassword(email, password) {
+async function logIn(email, password) {
   try {
     return await signInWithEmailAndPassword(auth, email, password);
   } catch (error) {
@@ -28,14 +28,25 @@ async function logInWithEmailAndPassword(email, password) {
   }
 }
 
+async function Signup(auth, email,password) {
+    try{
+      await createUserWithEmailAndPassword(auth, email,password)
+      alert ("User"+ email +" Created successfully!")
+    } catch(error) {
+      alert(error.message)
+    };
+
+}
 
 function logout() {
   return signOut(auth);
 }
 
+
 export {
   auth,
   db,
-  logInWithEmailAndPassword,
+  logIn,
+  Signup,
   logout,
 };
