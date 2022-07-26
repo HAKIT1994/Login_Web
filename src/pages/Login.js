@@ -14,8 +14,12 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
         
         useEffect(() => {
+            if (loading) {
+                // maybe trigger a loading screen
+                return;
+              }
             if (user) return navigate("/home");
-        }, [user]);
+        }, [user, loading]);
 
         return (
             <>

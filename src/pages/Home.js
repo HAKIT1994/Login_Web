@@ -2,11 +2,22 @@ import React,  { useEffect, useState } from 'react'
 import './Home.css'
 import { auth, db} from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
 
-  var Emailname = user.email.split("@")[0]
+  if (user){var Emailname = user.email.split("@")[0]}
+  
+
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return;
+    }
+    if (!user) return navigate("/login");
+  }, [user, loading]);
 
   return (
     <>
