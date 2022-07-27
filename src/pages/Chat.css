@@ -1,4 +1,34 @@
 .chat {
     text-align: center;
     margin-top: 100px;
+    justify-content:center;
+}
+
+.chat__action{
+    background-color: antiquewhite;
+    padding: 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.chat-room-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 30px;
+}
+
+.chat-room-list li {
+    height: 100px;
+    background: rgb(109, 106, 106);
+    flex: 1 1 calc(50% - 6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-room-list a {
+    text-decoration: none;
+    color: #fff;
 }

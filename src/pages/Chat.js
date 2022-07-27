@@ -4,7 +4,7 @@ import { auth, logIn } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import './Chat.css'
 import {db} from '../firebase'
-import {collection, getDocs, addDoc, doc, setDoc} from "firebase/firestore";
+import {collection, getDocs, addDoc, doc, setDoc,serverTimestamp} from "firebase/firestore";
 
 function Chat() {
 
@@ -35,10 +35,10 @@ function Chat() {
             return
         }
 
-        const now = new Date().toLocaleString()
+
         await setDoc(doc(db, "ChatRooms", roomname), {  
             message: "Welcome to "+ roomname,
-            date: now
+            timestamp: new Date().toLocaleString(),
           });
 
         GetData()
@@ -57,17 +57,14 @@ function Chat() {
     return (
         <div className='chat'>
             <h2>Your Chat Rooms</h2>
-            <div chat__action>
-                <table>
+                <table className='chat__action'>
                     <tr>
                         <td><input type='text' placeholder='New ChatRoom Name' onChange={(e) => setRoomname(e.target.value)} /></td>
                         <td><button onClick={createNewChat}>Add ChatRoom</button></td>
-                    </tr>
-                    <tr>
-                        <button onClick={GetData}>Refesh</button>
+                        <td> <button onClick={GetData}>Refesh</button></td>
                     </tr>
                 </table>
-            </div>
+
 
             {/* Create Room */}
             <ul className="chat-room-list">
