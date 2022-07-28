@@ -31,7 +31,7 @@ async function logIn(email, password) {
 async function Signup(auth, email,password) {
     try{
       await createUserWithEmailAndPassword(auth, email,password)
-      alert ("User"+ email +" Created successfully!")
+      alert ("User: "+ email +" Created successfully!")
     } catch(error) {
       alert(error.message)
     };

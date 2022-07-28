@@ -57,7 +57,14 @@ function Register() {
                     </tr>
                     <tr>
                         <td colSpan='2'>
-                            <input className="signup__btn" type="button" value='Signup'  onClick={()=>SignupSubmit(email,password1,password2)} />
+                            <input className="signup__btn" type="button" value='Signup'  
+                            onClick={()=> {const confirmBox = window.confirm(
+                              "Do you really want confirm to register this account?"
+                              )
+                              if (confirmBox === true) {
+                                SignupSubmit(email,password1,password2)
+                              }
+                            }}/>
                         </td>
                     </tr>
                 </table>

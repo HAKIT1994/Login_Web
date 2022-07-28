@@ -12,11 +12,16 @@
     justify-content: center;
 }
 
+.chatroom__area{
+    border-style: double;
+}
+
 .chat-room-list {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     padding: 30px;
+    
 }
 
 .chat-room-list li {
@@ -26,9 +31,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
 }
 
 .chat-room-list a {
     text-decoration: none;
     color: #fff;
+}
+
+.chat_btn {
+    padding: 3px;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+.chat__action input {
+    padding: 3px;
+    background-color: aliceblue;
+    cursor:auto;
 }

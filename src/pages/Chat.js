@@ -35,14 +35,14 @@ function Chat() {
             return
         }
 
-
+        const now = new Date().toLocaleString()
         await setDoc(doc(db, "ChatRooms", roomname), {  
             message: "Welcome to "+ roomname,
-            timestamp: new Date().toLocaleString(),
+            timestamp: now,
           });
 
         GetData()
-      }
+    }
       
     
     useEffect(() => {
@@ -60,8 +60,8 @@ function Chat() {
                 <table className='chat__action'>
                     <tr>
                         <td><input type='text' placeholder='New ChatRoom Name' onChange={(e) => setRoomname(e.target.value)} /></td>
-                        <td><button onClick={createNewChat}>Add ChatRoom</button></td>
-                        <td> <button onClick={GetData}>Refesh</button></td>
+                        <td><button className="chat_btn" onClick={createNewChat}>Add ChatRoom</button></td>
+                        <td> <button className="chat_btn" onClick={GetData}>Refesh</button></td>
                     </tr>
                 </table>
 
