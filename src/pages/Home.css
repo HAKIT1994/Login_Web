@@ -6,3 +6,16 @@
 .upload__img:hover{
     animation: none;
 }
+
+.user__option__item {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user__option {
+    user-select: none;
+}
+
+.user__option__item input {
+    height: 25px;
+}
