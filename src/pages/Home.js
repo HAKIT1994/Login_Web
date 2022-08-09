@@ -43,7 +43,7 @@ function Home() {
           <h2>Welcome {Emailname}</h2>
           
           <div>
-          <h2>Upload and Display Image </h2>
+          {/* <h2>Upload and Display Image </h2>
           {selectedImage && (
             <div>
             <img alt="not fount" width={"250px"} className='upload__img' src={URL.createObjectURL(selectedImage)} />
@@ -62,7 +62,7 @@ function Home() {
           
           {photoURL}
           {console.log(auth.currentUser)}
-          
+           */}
     </div>
       </div>
     </div>
